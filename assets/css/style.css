@@ -634,9 +634,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     width: 100%;
 }
 
+.portfolio .container {
+    width: 100%; /* Override any restrictions */
+    padding: 0 15px; /* Ensure some padding on smaller screens */
+}
+
 .portfolio-content {
     padding-top: 100px;
-    width: 100%; /* Ensure the portfolio content spans the full width */
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -645,12 +650,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     flex-wrap: wrap;
     gap: 20px; /* Space between items */
     width: 100%;
+    
 }
 
 .isotope .item {
     position: relative;
     overflow: hidden;
-    flex: 1 1 calc(33.33% - 20px); /* Three columns on larger screens */
+    width: 100%;
+
+    flex: 1 1 33.33%; /*Three columns, but each item should flex to fill the space*/
     height: 300px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -664,7 +672,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .item:hover img {
-    transform: scale(1.5);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .isotope-overlay {
@@ -716,6 +724,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         height: 200px;
     }
 }
+
 
 .clients {padding-top: 50px;}
 .clients-area {
